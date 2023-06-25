@@ -1,9 +1,23 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} */
 
 body {
   background-color: lightslategray;
+}
+
+.weather {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 1 0 auto;
+}
+
+img {
+  height: 75px;
+  width: auto;
 }
