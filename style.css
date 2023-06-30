@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,600;1,300;1,600&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -6,16 +8,33 @@
 
 body {
   display: flex;
-  background-color: lightsalmon;
-  justify-content: space-around;
+  background-color: rgb(39, 33, 77);
+  justify-content: center;
+  align-items: center;
+  font-family: "Noto Sans", sans-serif;
 }
 
 .weather {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .main {
+  color: white;
   display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.condition {
+  font-size: 2rem;
+}
+
+.temperature {
+  font-size: 32px;
+  font-weight: 600;
+  font-style: italic;
 }
 
 .additional {
