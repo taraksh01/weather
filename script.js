@@ -19,6 +19,10 @@ let weather = (currentWeatherInfo) => {
   const location = document.querySelector(".location");
   const dateTime = document.querySelector(".date-time");
   const temperature = document.querySelector(".temperature");
+  const feelsLike = document.querySelector(".feels-like");
+  const humidity = document.querySelector(".humidity");
+  const windSpeed = document.querySelector(".wind");
+  const visibility = document.querySelector(".visibility");
 
   condition.textContent = currentWeatherInfo.current.condition.text;
   location.textContent = currentWeatherInfo.location.name;
@@ -29,8 +33,20 @@ let weather = (currentWeatherInfo) => {
   temperature.appendChild(img);
 
   const temp = document.createElement("div");
-  temp.innerHTML = `${currentWeatherInfo.current.temp_c} ℃`;
+  temp.textContent = `${currentWeatherInfo.current.temp_c} ℃`;
   temperature.appendChild(temp);
 
-  console.log(currentWeatherInfo);
+  const feels = document.createElement("div");
+  const humid = document.createElement("div");
+  const vis = document.createElement("div");
+  const wind = document.createElement("div");
+  feels.textContent = `${currentWeatherInfo.current.feelslike_c} ℃`;
+  humid.textContent = currentWeatherInfo.current.humidity;
+  vis.textContent = `${currentWeatherInfo.current.vis_km} KM`;
+  wind.textContent = `${currentWeatherInfo.current.wind_kph} Kmph`;
+  feelsLike.appendChild(feels);
+  humidity.appendChild(humid);
+  visibility.appendChild(vis);
+  windSpeed.appendChild(wind);
+  console.log(currentWeatherInfo.current);
 };
