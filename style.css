@@ -10,18 +10,17 @@ body {
   display: flex;
   background-color: rgb(39, 33, 77);
   justify-content: center;
-  align-items: center;
+  flex-direction: column;
   font-family: "Noto Sans", sans-serif;
 }
 
 .weather {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-around;
+  color: white;
 }
 
 .main {
-  color: white;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -29,6 +28,10 @@ body {
 
 .condition {
   font-size: 2rem;
+  font-weight: 600;
+}
+.location {
+  font-size: 1.2rem;
 }
 
 .temperature {
@@ -39,4 +42,15 @@ body {
 
 .additional {
   display: flex;
+  flex-direction: column;
+  font-size: 1.6rem;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  font-style: italic;
+  line-height: 1.15;
+}
+
+.show {
+  font-size: 0.9rem;
+  font-style: normal;
 }
